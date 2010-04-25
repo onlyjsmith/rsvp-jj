@@ -1,0 +1,35 @@
+<% title "Replies" %>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Engagement</th>
+    <th>Engagment Adults</th>
+    <th>Engagement Children</th>
+    <th>Wedding</th>
+    <th>Wedding Adults</th>
+    <th>Wedding Children</th>
+    <th>Camping</th>
+    <th>Diet</th>
+    <th>Notes</th>
+  </tr>
+  <% for reply in @replies %>
+    <tr>
+      <td><%=h reply.name %></td>
+      <td><%=h reply.engagement %></td>
+      <td><%=h reply.engagment_adults %></td>
+      <td><%=h reply.engagement_children %></td>
+      <td><%=h reply.wedding %></td>
+      <td><%=h reply.wedding_adults %></td>
+      <td><%=h reply.wedding_children %></td>
+      <td><%=h reply.camping %></td>
+      <td><%=h reply.diet %></td>
+      <td><%=h reply.notes %></td>
+      <td><%= link_to "Show", reply %></td>
+      <td><%= link_to "Edit", edit_reply_path(reply) %></td>
+      <td><%= link_to "Destroy", reply, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Reply", new_reply_path %></p>

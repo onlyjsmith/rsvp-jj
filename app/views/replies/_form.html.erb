@@ -1,0 +1,44 @@
+<% form_for @reply do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :engagement %><br />
+    <%= f.check_box :engagement %>
+  </p>
+  <p>
+    <%= f.label :engagment_adults %><br />
+    <%= f.text_field :engagment_adults %>
+  </p>
+  <p>
+    <%= f.label :engagement_children %><br />
+    <%= f.text_field :engagement_children %>
+  </p>
+  <p>
+    <%= f.label :wedding %><br />
+    <%= f.check_box :wedding %>
+  </p>
+  <p>
+    <%= f.label :wedding_adults %><br />
+    <%= f.text_field :wedding_adults %>
+  </p>
+  <p>
+    <%= f.label :wedding_children %><br />
+    <%= f.text_field :wedding_children %>
+  </p>
+  <p>
+    <%= f.label :camping %><br />
+    <%= f.check_box :camping %>
+  </p>
+  <p>
+    <%= f.label :diet %><br />
+    <%= f.text_field :diet %>
+  </p>
+  <p>
+    <%= f.label :notes %><br />
+    <%= f.text_field :notes %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

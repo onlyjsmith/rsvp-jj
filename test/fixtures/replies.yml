@@ -1,0 +1,23 @@
+one:
+  name: MyString
+  engagement: false
+  engagment_adults: 1
+  engagement_children: 1
+  wedding: false
+  wedding_adults: 1
+  wedding_children: 1
+  camping: false
+  diet: MyString
+  notes: MyString
+
+two:
+  name: MyString
+  engagement: false
+  engagment_adults: 1
+  engagement_children: 1
+  wedding: false
+  wedding_adults: 1
+  wedding_children: 1
+  camping: false
+  diet: MyString
+  notes: MyString

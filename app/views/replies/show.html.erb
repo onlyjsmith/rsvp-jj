@@ -1,0 +1,48 @@
+<% title "Reply" %>
+
+<p>
+  <strong>Name:</strong>
+  <%=h @reply.name %>
+</p>
+<p>
+  <strong>Engagement:</strong>
+  <%=h @reply.engagement %>
+</p>
+<p>
+  <strong>Engagment Adults:</strong>
+  <%=h @reply.engagment_adults %>
+</p>
+<p>
+  <strong>Engagement Children:</strong>
+  <%=h @reply.engagement_children %>
+</p>
+<p>
+  <strong>Wedding:</strong>
+  <%=h @reply.wedding %>
+</p>
+<p>
+  <strong>Wedding Adults:</strong>
+  <%=h @reply.wedding_adults %>
+</p>
+<p>
+  <strong>Wedding Children:</strong>
+  <%=h @reply.wedding_children %>
+</p>
+<p>
+  <strong>Camping:</strong>
+  <%=h @reply.camping %>
+</p>
+<p>
+  <strong>Diet:</strong>
+  <%=h @reply.diet %>
+</p>
+<p>
+  <strong>Notes:</strong>
+  <%=h @reply.notes %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_reply_path(@reply) %> |
+  <%= link_to "Destroy", @reply, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", replies_path %>
+</p>
