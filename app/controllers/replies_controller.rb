@@ -1,4 +1,7 @@
 class RepliesController < ApplicationController
+
+require "fastercsv"
+
   def index
     @replies = Reply.all
   end
@@ -40,5 +43,43 @@ class RepliesController < ApplicationController
     @reply.destroy
     flash[:notice] = "Successfully destroyed reply."
     redirect_to replies_url
+  end
+
+  # def csv
+  #   csv_string = FasterCSV.generate do |csv|
+  #     Reply.all.each do |object|
+  #       csv << object.attributes.values
+  #     end
+  #   end
+  #   
+  #   filename = "download.csv"
+  #   send_data(csv_string,
+  #     :type => 'text/csv; charset=utf-8; header=present',
+  #     :filename => filename)
+  # end
+  
+  def csv
+     @records = Reply.all
+     csv_string = FasterCSV.generate do |csv|
+       csv << %w{Name Engagement Engagement_Adults Engagement_Children Wedding Wedding_Adults Wedding_Children Camping Diet Notes}
+       @records.each do |line|
+         csv << [
+           line['name'], 
+           line['engagement'],
+           line['engagement_adults'],
+           line['engagement_children'],
+           line['wedding'],
+           line['wedding_adults'],
+           line['wedding_children'],
+           line['camping'],
+           line['diet'],
+           line['notes']
+           ]
+       end
+     end
+     filename = "rsvp_download" + Time.now.strftime("%d%m%y-%H%M").to_s + ".csv"
+     send_data(csv_string,
+    :type => 'text/csv; charset=utf-8; header=present',
+    :filename => filename)
   end
 end

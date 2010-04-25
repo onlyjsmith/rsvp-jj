@@ -4,7 +4,7 @@
   <tr>
     <th>Name</th>
     <th>Engagement</th>
-    <th>Engagment Adults</th>
+    <th>Engagement Adults</th>
     <th>Engagement Children</th>
     <th>Wedding</th>
     <th>Wedding Adults</th>
@@ -17,7 +17,7 @@
     <tr>
       <td><%=h reply.name %></td>
       <td><%=h reply.engagement %></td>
-      <td><%=h reply.engagment_adults %></td>
+      <td><%=h reply.engagement_adults %></td>
       <td><%=h reply.engagement_children %></td>
       <td><%=h reply.wedding %></td>
       <td><%=h reply.wedding_adults %></td>
@@ -33,3 +33,4 @@
 </table>
 
 <p><%= link_to "New Reply", new_reply_path %></p>
+<p><%= link_to "Download CSV", csv_path %></p>
