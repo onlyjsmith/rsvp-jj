@@ -1,6 +1,6 @@
 class RepliesController < ApplicationController
   
-  before_filter :check_logged_in, :only => [:index, :edit, :update, :destroy]
+  # before_filter :check_logged_in, :only => [:index, :edit, :update, :destroy]
 
 require "fastercsv"
 
