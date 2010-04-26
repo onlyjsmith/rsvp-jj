@@ -1,6 +1,6 @@
 body {
-  background-color: #4B7399;
-  font-family: Verdana, Helvetica, Arial;
+/*  background-color: #4B7399;*/
+  font-family: Arial;
   font-size: 14px;
 }
 
@@ -78,4 +78,16 @@ a {
 #errorExplanation ul li {
   font-size: 12px;
   list-style: disc;
+}
+
+.section {
+	padding: 10px;
+	padding-bottom: 60px;
+	margin-bottom: 20px;
+	margin-top: 10px;
+	border-left: 3px solid #E388C5;
+}
+
+.subsection {
+	margin-left: 60px;
 }
