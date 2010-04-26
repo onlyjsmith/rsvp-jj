@@ -1,4 +1,6 @@
 class RepliesController < ApplicationController
+  
+  before_filter :check_logged_in, :only => [:index, :edit, :update, :destroy]
 
 require "fastercsv"
 
@@ -18,7 +20,7 @@ require "fastercsv"
     @reply = Reply.new(params[:reply])
     if @reply.save
       flash[:notice] = "Successfully created reply."
-      redirect_to @reply
+      redirect_to thanks_path
     else
       render :action => 'new'
     end
@@ -43,6 +45,10 @@ require "fastercsv"
     @reply.destroy
     flash[:notice] = "Successfully destroyed reply."
     redirect_to replies_url
+  end
+  
+  def thanks
+    
   end
 
   # def csv
@@ -81,5 +87,11 @@ require "fastercsv"
      send_data(csv_string,
     :type => 'text/csv; charset=utf-8; header=present',
     :filename => filename)
+  end
+private  
+  def check_logged_in
+    authenticate_or_request_with_http_basic("Replies") do |username, password|
+      username == "wedding" && password == "wedding"
+    end    
   end
 end

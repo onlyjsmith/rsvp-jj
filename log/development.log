@@ -6151,3 +6151,502 @@ Rendering template within layouts/application
 Rendering replies/new
 Rendered replies/_form (32.2ms)
 Completed in 55ms (View: 50, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing RepliesController#new (for 127.0.0.1 at 2010-04-26 08:01:28) [GET]
+Rendering template within layouts/application
+Rendering replies/new
+Rendered replies/_form (60.5ms)
+Completed in 72ms (View: 68, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#new (for 127.0.0.1 at 2010-04-26 09:02:10) [GET]
+
+SyntaxError (/Users/jonathan/Dev/rsvp-jj/app/controllers/replies_controller.rb:89: syntax error, unexpected '|', expecting '\n' or ';'
+...p_basic("Replies") do def do |username, password|
+                              ^
+/Users/jonathan/Dev/rsvp-jj/app/controllers/replies_controller.rb:89: syntax error, unexpected '|', expecting '='):
+  
+
+Rendered rescues/_trace (35.0ms)
+Rendered rescues/_request_and_response (1.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RepliesController#new (for 127.0.0.1 at 2010-04-26 09:02:22) [GET]
+Rendering template within layouts/application
+Rendering replies/new
+Rendered replies/_form (271.0ms)
+Completed in 523ms (View: 517, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-26 09:02:29) [GET]
+
+ActionController::RoutingError (No route matches "/index" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing RepliesController#index (for 127.0.0.1 at 2010-04-26 09:02:33) [GET]
+Filter chain halted as [:check_logged_in] rendered_or_redirected.
+Completed in 1ms (View: 1, DB: 0) | 401 Unauthorized [http://localhost/replies]
+
+
+Processing RepliesController#index (for 127.0.0.1 at 2010-04-26 09:02:37) [GET]
+  [4;36;1mReply Load (105.5ms)[0m   [0;1mSELECT * FROM "replies" [0m
+Rendering template within layouts/application
+Rendering replies/index
+Completed in 207ms (View: 96, DB: 106) | 200 OK [http://localhost/replies]
+
+
+Processing RepliesController#new (for 127.0.0.1 at 2010-04-26 09:02:48) [GET]
+Rendering template within layouts/application
+Rendering replies/new
+Rendered replies/_form (13.5ms)
+Completed in 21ms (View: 15, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing RepliesController#edit (for 127.0.0.1 at 2010-04-26 09:02:54) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mReply Load (0.1ms)[0m   [0mSELECT * FROM "replies" WHERE ("replies"."id" = 1) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Reply with ID=1):
+  app/controllers/replies_controller.rb:30:in `edit'
+
+Rendered rescues/_trace (104.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing RepliesController#show (for 127.0.0.1 at 2010-04-26 09:03:01) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mReply Load (0.1ms)[0m   [0;1mSELECT * FROM "replies" WHERE ("replies"."id" = 1) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Reply with ID=1):
+  app/controllers/replies_controller.rb:12:in `show'
+
+Rendered rescues/_trace (38.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing RepliesController#index (for 127.0.0.1 at 2010-04-26 09:03:09) [GET]
+  [4;35;1mReply Load (0.4ms)[0m   [0mSELECT * FROM "replies" [0m
+Rendering template within layouts/application
+Rendering replies/index
+Completed in 6ms (View: 2, DB: 0) | 200 OK [http://localhost/replies/]
+
+
+Processing RepliesController#index (for 127.0.0.1 at 2010-04-26 09:03:34) [GET]
+  [4;36;1mReply Load (0.3ms)[0m   [0;1mSELECT * FROM "replies" [0m
+Rendering template within layouts/application
+Rendering replies/index
+Completed in 6ms (View: 2, DB: 0) | 200 OK [http://localhost/replies/]
+
+
+Processing RepliesController#new (for 127.0.0.1 at 2010-04-26 09:03:36) [GET]
+Rendering template within layouts/application
+Rendering replies/new
+Rendered replies/_form (40.8ms)
+Completed in 116ms (View: 42, DB: 0) | 200 OK [http://localhost/replies/new]
+
+
+Processing RepliesController#create (for 127.0.0.1 at 2010-04-26 09:03:54) [POST]
+  Parameters: {"commit"=>"Send your reply", "reply"=>{"diet"=>"None whatsoever", "engagement_children"=>"-", "name"=>"Someone", "wedding_children"=>"0", "notes"=>"Nothing.", "wedding_adults"=>"2", "engagement_adults"=>"2", "wedding"=>"true", "engagement"=>"true"}, "authenticity_token"=>"UAZpnyKWRB3beS3LY4BXKj8tfX2A40njmDswTVjb6/w="}
+  [4;35;1mReply Create (104.8ms)[0m   [0mINSERT INTO "replies" ("name", "engagement_children", "diet", "wedding_children", "created_at", "camping", "notes", "updated_at", "wedding_adults", "engagement_adults", "engagement", "wedding") VALUES('Someone', 0, 'None whatsoever', 0, '2010-04-26 08:03:54', NULL, 'Nothing.', '2010-04-26 08:03:54', 2, 2, 't', 't')[0m
+Redirected to http://localhost:3000/replies/1
+Completed in 271ms (DB: 105) | 302 Found [http://localhost/replies]
+
+
+Processing RepliesController#show (for 127.0.0.1 at 2010-04-26 09:03:54) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mReply Load (0.3ms)[0m   [0;1mSELECT * FROM "replies" WHERE ("replies"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering replies/show
+Completed in 369ms (View: 363, DB: 0) | 200 OK [http://localhost/replies/1]
+
+
+Processing RepliesController#index (for 127.0.0.1 at 2010-04-26 09:03:57) [GET]
+  [4;35;1mReply Load (0.5ms)[0m   [0mSELECT * FROM "replies" [0m
+Rendering template within layouts/application
+Rendering replies/index
+Completed in 12ms (View: 7, DB: 1) | 200 OK [http://localhost/replies]
+
+
+Processing RepliesController#index (for 127.0.0.1 at 2010-04-26 09:04:02) [GET]
+  [4;36;1mReply Load (0.5ms)[0m   [0;1mSELECT * FROM "replies" [0m
+Rendering template within layouts/application
+Rendering replies/index
+Completed in 13ms (View: 8, DB: 1) | 200 OK [http://localhost/replies]
+
+
+Processing RepliesController#new (for 127.0.0.1 at 2010-04-26 09:04:04) [GET]
+Rendering template within layouts/application
+Rendering replies/new
+Rendered replies/_form (13.1ms)
+Completed in 19ms (View: 15, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing RepliesController#new (for 127.0.0.1 at 2010-04-26 09:04:10) [GET]
+Rendering template within layouts/application
+Rendering replies/new
+Rendered replies/_form (104.5ms)
+Completed in 111ms (View: 106, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing RepliesController#create (for 127.0.0.1 at 2010-04-26 09:04:24) [POST]
+  Parameters: {"commit"=>"Send your reply", "reply"=>{"diet"=>"n/a", "engagement_children"=>"", "name"=>"Ann Other", "wedding_children"=>"", "notes"=>"n/a", "wedding_adults"=>"4", "engagement_adults"=>"4", "wedding"=>"true", "engagement"=>"true"}, "authenticity_token"=>"UAZpnyKWRB3beS3LY4BXKj8tfX2A40njmDswTVjb6/w="}
+  [4;35;1mReply Create (0.5ms)[0m   [0mINSERT INTO "replies" ("name", "engagement_children", "diet", "wedding_children", "created_at", "camping", "notes", "updated_at", "wedding_adults", "engagement_adults", "engagement", "wedding") VALUES('Ann Other', NULL, 'n/a', NULL, '2010-04-26 08:04:24', NULL, 'n/a', '2010-04-26 08:04:24', 4, 4, 't', 't')[0m
+Redirected to http://localhost:3000/replies/2
+Completed in 13ms (DB: 0) | 302 Found [http://localhost/replies]
+
+
+Processing RepliesController#show (for 127.0.0.1 at 2010-04-26 09:04:24) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mReply Load (0.3ms)[0m   [0;1mSELECT * FROM "replies" WHERE ("replies"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering replies/show
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/replies/2]
+
+
+Processing RepliesController#index (for 127.0.0.1 at 2010-04-26 09:04:26) [GET]
+  [4;35;1mReply Load (0.7ms)[0m   [0mSELECT * FROM "replies" [0m
+Rendering template within layouts/application
+Rendering replies/index
+Completed in 14ms (View: 9, DB: 1) | 200 OK [http://localhost/replies]
+
+
+Processing RepliesController#new (for 127.0.0.1 at 2010-04-26 09:04:45) [GET]
+Rendering template within layouts/application
+Rendering replies/new
+Rendered replies/_form (12.6ms)
+Completed in 20ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing RepliesController#create (for 127.0.0.1 at 2010-04-26 09:04:50) [POST]
+  Parameters: {"commit"=>"Send your reply", "reply"=>{"diet"=>"", "engagement_children"=>"", "name"=>"Jon", "wedding_children"=>"", "notes"=>"", "wedding_adults"=>"", "engagement_adults"=>""}, "authenticity_token"=>"vZrShgUG8e+YyiDiDDkvB6YfbyNjR+INlH14hzlEiKM="}
+Filter chain halted as [:check_logged_in] rendered_or_redirected.
+Completed in 1ms (View: 1, DB: 0) | 401 Unauthorized [http://localhost/replies]
+
+
+Processing RepliesController#new (for 127.0.0.1 at 2010-04-26 09:05:17) [GET]
+Rendering template within layouts/application
+Rendering replies/new
+Rendered replies/_form (13.2ms)
+Completed in 20ms (View: 15, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing RepliesController#index (for 127.0.0.1 at 2010-04-26 09:05:20) [GET]
+  [4;36;1mReply Load (0.7ms)[0m   [0;1mSELECT * FROM "replies" [0m
+Rendering template within layouts/application
+Rendering replies/index
+Completed in 15ms (View: 11, DB: 1) | 200 OK [http://localhost/replies]
+
+
+Processing RepliesController#create (for 127.0.0.1 at 2010-04-26 09:05:26) [POST]
+  Parameters: {"commit"=>"Send your reply", "reply"=>{"diet"=>"", "engagement_children"=>"", "name"=>"Jon", "wedding_children"=>"", "notes"=>"", "wedding_adults"=>"", "engagement_adults"=>""}, "authenticity_token"=>"vZrShgUG8e+YyiDiDDkvB6YfbyNjR+INlH14hzlEiKM="}
+Filter chain halted as [:check_logged_in] rendered_or_redirected.
+Completed in 1ms (View: 1, DB: 0) | 401 Unauthorized [http://localhost/replies]
+
+
+Processing RepliesController#create (for 127.0.0.1 at 2010-04-26 09:05:41) [POST]
+  Parameters: {"commit"=>"Send your reply", "reply"=>{"diet"=>"", "engagement_children"=>"", "name"=>"Jon", "wedding_children"=>"", "notes"=>"", "wedding_adults"=>"", "engagement_adults"=>""}, "authenticity_token"=>"vZrShgUG8e+YyiDiDDkvB6YfbyNjR+INlH14hzlEiKM="}
+  [4;35;1mReply Create (8.7ms)[0m   [0mINSERT INTO "replies" ("name", "engagement_children", "diet", "wedding_children", "created_at", "camping", "notes", "updated_at", "wedding_adults", "engagement_adults", "engagement", "wedding") VALUES('Jon', NULL, '', NULL, '2010-04-26 08:05:41', NULL, '', '2010-04-26 08:05:41', NULL, NULL, NULL, NULL)[0m
+Redirected to http://localhost:3000/replies/3
+Completed in 22ms (DB: 9) | 302 Found [http://localhost/replies]
+
+
+Processing RepliesController#show (for 127.0.0.1 at 2010-04-26 09:05:41) [GET]
+  Parameters: {"id"=>"3"}
+Filter chain halted as [:check_logged_in] rendered_or_redirected.
+Completed in 4ms (View: 3, DB: 0) | 401 Unauthorized [http://localhost/replies/3]
+
+
+Processing RepliesController#show (for 127.0.0.1 at 2010-04-26 09:05:43) [GET]
+  Parameters: {"id"=>"3"}
+Filter chain halted as [:check_logged_in] rendered_or_redirected.
+Completed in 1ms (View: 1, DB: 0) | 401 Unauthorized [http://localhost/replies/3]
+
+
+Processing RepliesController#new (for 127.0.0.1 at 2010-04-26 09:05:48) [GET]
+Rendering template within layouts/application
+Rendering replies/new
+Rendered replies/_form (14.6ms)
+Completed in 22ms (View: 17, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing RepliesController#new (for 127.0.0.1 at 2010-04-26 09:05:55) [GET]
+Rendering template within layouts/application
+Rendering replies/new
+Rendered replies/_form (12.6ms)
+Completed in 19ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing RepliesController#create (for 127.0.0.1 at 2010-04-26 09:06:04) [POST]
+  Parameters: {"commit"=>"Send your reply", "reply"=>{"diet"=>"", "engagement_children"=>"", "name"=>"Successful", "wedding_children"=>"", "notes"=>"", "wedding_adults"=>"", "engagement_adults"=>"", "wedding"=>"false", "engagement"=>"false"}, "authenticity_token"=>"vZrShgUG8e+YyiDiDDkvB6YfbyNjR+INlH14hzlEiKM="}
+  [4;36;1mReply Create (0.5ms)[0m   [0;1mINSERT INTO "replies" ("name", "engagement_children", "diet", "wedding_children", "created_at", "camping", "notes", "updated_at", "wedding_adults", "engagement_adults", "engagement", "wedding") VALUES('Successful', NULL, '', NULL, '2010-04-26 08:06:04', NULL, '', '2010-04-26 08:06:04', NULL, NULL, 'f', 'f')[0m
+Redirected to http://localhost:3000/replies/4
+Completed in 21ms (DB: 0) | 302 Found [http://localhost/replies]
+
+
+Processing RepliesController#show (for 127.0.0.1 at 2010-04-26 09:06:04) [GET]
+  Parameters: {"id"=>"4"}
+Filter chain halted as [:check_logged_in] rendered_or_redirected.
+Completed in 1ms (View: 1, DB: 0) | 401 Unauthorized [http://localhost/replies/4]
+
+
+Processing RepliesController#index (for 127.0.0.1 at 2010-04-26 09:06:10) [GET]
+  [4;35;1mReply Load (0.8ms)[0m   [0mSELECT * FROM "replies" [0m
+Rendering template within layouts/application
+Rendering replies/index
+Completed in 21ms (View: 16, DB: 1) | 200 OK [http://localhost/replies]
+
+
+Processing RepliesController#new (for 127.0.0.1 at 2010-04-26 09:06:59) [GET]
+Rendering template within layouts/application
+Rendering replies/new
+Rendered replies/_form (70.6ms)
+Completed in 78ms (View: 73, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing RepliesController#index (for 127.0.0.1 at 2010-04-26 09:07:01) [GET]
+  [4;36;1mReply Load (0.8ms)[0m   [0;1mSELECT * FROM "replies" [0m
+Rendering template within layouts/application
+Rendering replies/index
+Completed in 26ms (View: 16, DB: 1) | 200 OK [http://localhost/replies]
+
+
+Processing RepliesController#index (for 127.0.0.1 at 2010-04-26 09:07:03) [GET]
+  [4;35;1mReply Load (0.8ms)[0m   [0mSELECT * FROM "replies" [0m
+Rendering template within layouts/application
+Rendering replies/index
+Completed in 24ms (View: 15, DB: 1) | 200 OK [http://localhost/replies]
+
+
+Processing RepliesController#create (for 127.0.0.1 at 2010-04-26 09:07:10) [POST]
+  Parameters: {"commit"=>"Send your reply", "reply"=>{"diet"=>"", "engagement_children"=>"", "name"=>"Updated", "wedding_children"=>"", "notes"=>"", "wedding_adults"=>"", "engagement_adults"=>""}, "authenticity_token"=>"vZrShgUG8e+YyiDiDDkvB6YfbyNjR+INlH14hzlEiKM="}
+  [4;36;1mReply Create (1.7ms)[0m   [0;1mINSERT INTO "replies" ("name", "engagement_children", "diet", "wedding_children", "created_at", "camping", "notes", "updated_at", "wedding_adults", "engagement_adults", "engagement", "wedding") VALUES('Updated', NULL, '', NULL, '2010-04-26 08:07:10', NULL, '', '2010-04-26 08:07:10', NULL, NULL, NULL, NULL)[0m
+Redirected to http://localhost:3000/replies/5
+Completed in 27ms (DB: 2) | 302 Found [http://localhost/replies]
+
+
+Processing RepliesController#show (for 127.0.0.1 at 2010-04-26 09:07:10) [GET]
+  Parameters: {"id"=>"5"}
+Filter chain halted as [:check_logged_in] rendered_or_redirected.
+Completed in 1ms (View: 1, DB: 0) | 401 Unauthorized [http://localhost/replies/5]
+
+
+Processing RepliesController#index (for 127.0.0.1 at 2010-04-26 09:07:13) [GET]
+  [4;35;1mReply Load (0.9ms)[0m   [0mSELECT * FROM "replies" [0m
+Rendering template within layouts/application
+Rendering replies/index
+Completed in 24ms (View: 18, DB: 1) | 200 OK [http://localhost/replies]
+
+
+Processing RepliesController#create (for 127.0.0.1 at 2010-04-26 09:07:33) [POST]
+  Parameters: {"commit"=>"Send your reply", "reply"=>{"diet"=>"", "engagement_children"=>"", "name"=>"Updated again", "wedding_children"=>"", "notes"=>"", "wedding_adults"=>"", "engagement_adults"=>""}, "authenticity_token"=>"vZrShgUG8e+YyiDiDDkvB6YfbyNjR+INlH14hzlEiKM="}
+  [4;36;1mReply Create (0.6ms)[0m   [0;1mINSERT INTO "replies" ("name", "engagement_children", "diet", "wedding_children", "created_at", "camping", "notes", "updated_at", "wedding_adults", "engagement_adults", "engagement", "wedding") VALUES('Updated again', NULL, '', NULL, '2010-04-26 08:07:33', NULL, '', '2010-04-26 08:07:33', NULL, NULL, NULL, NULL)[0m
+Redirected to http://localhost:3000/replies/6
+Completed in 12ms (DB: 1) | 302 Found [http://localhost/replies]
+
+
+Processing RepliesController#show (for 127.0.0.1 at 2010-04-26 09:07:33) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mReply Load (0.3ms)[0m   [0mSELECT * FROM "replies" WHERE ("replies"."id" = 6) [0m
+Rendering template within layouts/application
+Rendering replies/show
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/replies/6]
+
+
+Processing RepliesController#index (for 127.0.0.1 at 2010-04-26 09:08:59) [GET]
+Filter chain halted as [:check_logged_in] rendered_or_redirected.
+Completed in 58ms (View: 57, DB: 0) | 401 Unauthorized [http://localhost/replies]
+
+
+Processing RepliesController#edit (for 127.0.0.1 at 2010-04-26 09:09:04) [GET]
+  Parameters: {"id"=>"6"}
+Filter chain halted as [:check_logged_in] rendered_or_redirected.
+Completed in 1ms (View: 1, DB: 0) | 401 Unauthorized [http://localhost/replies/6/edit]
+
+
+Processing RepliesController#edit (for 127.0.0.1 at 2010-04-26 09:09:14) [GET]
+  Parameters: {"id"=>"6"}
+Filter chain halted as [:check_logged_in] rendered_or_redirected.
+Completed in 1ms (View: 1, DB: 0) | 401 Unauthorized [http://localhost/replies/6/edit]
+
+
+Processing RepliesController#destroy (for 127.0.0.1 at 2010-04-26 09:09:19) [DELETE]
+  Parameters: {"authenticity_token"=>"vZrShgUG8e+YyiDiDDkvB6YfbyNjR+INlH14hzlEiKM=", "id"=>"6"}
+Filter chain halted as [:check_logged_in] rendered_or_redirected.
+Completed in 1ms (View: 1, DB: 0) | 401 Unauthorized [http://localhost/replies/6]
+
+
+Processing RepliesController#new (for 127.0.0.1 at 2010-04-26 09:09:24) [GET]
+Rendering template within layouts/application
+Rendering replies/new
+Rendered replies/_form (13.3ms)
+Completed in 20ms (View: 15, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing RepliesController#create (for 127.0.0.1 at 2010-04-26 09:09:29) [POST]
+  Parameters: {"commit"=>"Send your reply", "reply"=>{"diet"=>"", "engagement_children"=>"", "name"=>"go", "wedding_children"=>"", "notes"=>"", "wedding_adults"=>"", "engagement_adults"=>""}, "authenticity_token"=>"vZrShgUG8e+YyiDiDDkvB6YfbyNjR+INlH14hzlEiKM="}
+  [4;36;1mReply Create (2.1ms)[0m   [0;1mINSERT INTO "replies" ("name", "engagement_children", "diet", "wedding_children", "created_at", "camping", "notes", "updated_at", "wedding_adults", "engagement_adults", "engagement", "wedding") VALUES('go', NULL, '', NULL, '2010-04-26 08:09:29', NULL, '', '2010-04-26 08:09:29', NULL, NULL, NULL, NULL)[0m
+
+NoMethodError (undefined method `thanks_url' for #<RepliesController:0x104396318>):
+  app/controllers/replies_controller.rb:23:in `create'
+
+Rendered rescues/_trace (39.9ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RepliesController#create (for 127.0.0.1 at 2010-04-26 09:09:58) [POST]
+  Parameters: {"commit"=>"Send your reply", "reply"=>{"diet"=>"", "engagement_children"=>"", "name"=>"go", "wedding_children"=>"", "notes"=>"", "wedding_adults"=>"", "engagement_adults"=>""}, "authenticity_token"=>"vZrShgUG8e+YyiDiDDkvB6YfbyNjR+INlH14hzlEiKM="}
+  [4;35;1mReply Create (0.5ms)[0m   [0mINSERT INTO "replies" ("name", "engagement_children", "diet", "wedding_children", "created_at", "camping", "notes", "updated_at", "wedding_adults", "engagement_adults", "engagement", "wedding") VALUES('go', NULL, '', NULL, '2010-04-26 08:09:58', NULL, '', '2010-04-26 08:09:58', NULL, NULL, NULL, NULL)[0m
+
+NoMethodError (undefined method `thanks_url' for #<RepliesController:0x1040f3048>):
+  app/controllers/replies_controller.rb:23:in `create'
+
+Rendered rescues/_trace (40.6ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-26 09:10:45) [POST]
+  Parameters: {"commit"=>"Send your reply", "reply"=>{"diet"=>"", "engagement_children"=>"", "name"=>"go", "wedding_children"=>"", "notes"=>"", "wedding_adults"=>"", "engagement_adults"=>""}, "authenticity_token"=>"vZrShgUG8e+YyiDiDDkvB6YfbyNjR+INlH14hzlEiKM="}
+
+ActionController::RoutingError (No route matches "/replies" with {:method=>:post}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-26 09:10:48) [POST]
+  Parameters: {"commit"=>"Send your reply", "reply"=>{"diet"=>"", "engagement_children"=>"", "name"=>"go", "wedding_children"=>"", "notes"=>"", "wedding_adults"=>"", "engagement_adults"=>""}, "authenticity_token"=>"vZrShgUG8e+YyiDiDDkvB6YfbyNjR+INlH14hzlEiKM="}
+
+ActionController::RoutingError (No route matches "/replies" with {:method=>:post}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-26 09:11:00) [POST]
+  Parameters: {"commit"=>"Send your reply", "reply"=>{"diet"=>"", "engagement_children"=>"", "name"=>"go", "wedding_children"=>"", "notes"=>"", "wedding_adults"=>"", "engagement_adults"=>""}, "authenticity_token"=>"vZrShgUG8e+YyiDiDDkvB6YfbyNjR+INlH14hzlEiKM="}
+
+ActionController::RoutingError (No route matches "/replies" with {:method=>:post}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing RepliesController#create (for 127.0.0.1 at 2010-04-26 09:11:11) [POST]
+  Parameters: {"commit"=>"Send your reply", "reply"=>{"diet"=>"", "engagement_children"=>"", "name"=>"go", "wedding_children"=>"", "notes"=>"", "wedding_adults"=>"", "engagement_adults"=>""}, "authenticity_token"=>"vZrShgUG8e+YyiDiDDkvB6YfbyNjR+INlH14hzlEiKM="}
+  [4;36;1mReply Create (81.0ms)[0m   [0;1mINSERT INTO "replies" ("name", "engagement_children", "diet", "wedding_children", "created_at", "camping", "notes", "updated_at", "wedding_adults", "engagement_adults", "engagement", "wedding") VALUES('go', NULL, '', NULL, '2010-04-26 08:11:11', NULL, '', '2010-04-26 08:11:11', NULL, NULL, NULL, NULL)[0m
+
+NameError (undefined local variable or method `thanks_path' for #<RepliesController:0x1040d68a8>):
+  app/controllers/replies_controller.rb:23:in `create'
+
+Rendered rescues/_trace (104.3ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RepliesController#new (for 127.0.0.1 at 2010-04-26 09:11:17) [GET]
+Rendering template within layouts/application
+Rendering replies/new
+Rendered replies/_form (31.6ms)
+Completed in 54ms (View: 48, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing RepliesController#create (for 127.0.0.1 at 2010-04-26 09:11:20) [POST]
+  Parameters: {"commit"=>"Send your reply", "reply"=>{"diet"=>"", "engagement_children"=>"", "name"=>"wdwd", "wedding_children"=>"", "notes"=>"", "wedding_adults"=>"", "engagement_adults"=>""}, "authenticity_token"=>"vZrShgUG8e+YyiDiDDkvB6YfbyNjR+INlH14hzlEiKM="}
+  [4;35;1mReply Create (0.4ms)[0m   [0mINSERT INTO "replies" ("name", "engagement_children", "diet", "wedding_children", "created_at", "camping", "notes", "updated_at", "wedding_adults", "engagement_adults", "engagement", "wedding") VALUES('wdwd', NULL, '', NULL, '2010-04-26 08:11:20', NULL, '', '2010-04-26 08:11:20', NULL, NULL, NULL, NULL)[0m
+
+NameError (undefined local variable or method `thanks_path' for #<RepliesController:0x1042477f0>):
+  app/controllers/replies_controller.rb:23:in `create'
+
+Rendered rescues/_trace (111.0ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RepliesController#new (for 127.0.0.1 at 2010-04-26 09:11:38) [GET]
+Rendering template within layouts/application
+Rendering replies/new
+Rendered replies/_form (13.5ms)
+Completed in 20ms (View: 15, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing RepliesController#create (for 127.0.0.1 at 2010-04-26 09:11:40) [POST]
+  Parameters: {"commit"=>"Send your reply", "reply"=>{"diet"=>"", "engagement_children"=>"", "name"=>"222", "wedding_children"=>"", "notes"=>"", "wedding_adults"=>"", "engagement_adults"=>""}, "authenticity_token"=>"vZrShgUG8e+YyiDiDDkvB6YfbyNjR+INlH14hzlEiKM="}
+  [4;36;1mReply Create (0.4ms)[0m   [0;1mINSERT INTO "replies" ("name", "engagement_children", "diet", "wedding_children", "created_at", "camping", "notes", "updated_at", "wedding_adults", "engagement_adults", "engagement", "wedding") VALUES('222', NULL, '', NULL, '2010-04-26 08:11:40', NULL, '', '2010-04-26 08:11:40', NULL, NULL, NULL, NULL)[0m
+
+NameError (undefined local variable or method `replies_thanks_path' for #<RepliesController:0x1043426a0>):
+  app/controllers/replies_controller.rb:23:in `create'
+
+Rendered rescues/_trace (39.1ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RepliesController#create (for 127.0.0.1 at 2010-04-26 09:12:23) [POST]
+  Parameters: {"commit"=>"Send your reply", "reply"=>{"diet"=>"", "engagement_children"=>"", "name"=>"222", "wedding_children"=>"", "notes"=>"", "wedding_adults"=>"", "engagement_adults"=>""}, "authenticity_token"=>"vZrShgUG8e+YyiDiDDkvB6YfbyNjR+INlH14hzlEiKM="}
+  [4;35;1mReply Create (0.4ms)[0m   [0mINSERT INTO "replies" ("name", "engagement_children", "diet", "wedding_children", "created_at", "camping", "notes", "updated_at", "wedding_adults", "engagement_adults", "engagement", "wedding") VALUES('222', NULL, '', NULL, '2010-04-26 08:12:23', NULL, '', '2010-04-26 08:12:23', NULL, NULL, NULL, NULL)[0m
+
+NameError (undefined local variable or method `replies_thanks_path' for #<RepliesController:0x104055898>):
+  app/controllers/replies_controller.rb:23:in `create'
+
+Rendered rescues/_trace (39.1ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RepliesController#create (for 127.0.0.1 at 2010-04-26 09:12:48) [POST]
+  Parameters: {"commit"=>"Send your reply", "reply"=>{"diet"=>"", "engagement_children"=>"", "name"=>"222", "wedding_children"=>"", "notes"=>"", "wedding_adults"=>"", "engagement_adults"=>""}, "authenticity_token"=>"vZrShgUG8e+YyiDiDDkvB6YfbyNjR+INlH14hzlEiKM="}
+  [4;36;1mReply Create (0.4ms)[0m   [0;1mINSERT INTO "replies" ("name", "engagement_children", "diet", "wedding_children", "created_at", "camping", "notes", "updated_at", "wedding_adults", "engagement_adults", "engagement", "wedding") VALUES('222', NULL, '', NULL, '2010-04-26 08:12:48', NULL, '', '2010-04-26 08:12:48', NULL, NULL, NULL, NULL)[0m
+Redirected to http://localhost:3000/thanks
+Completed in 12ms (DB: 0) | 302 Found [http://localhost/replies]
+
+
+Processing RepliesController#thanks (for 127.0.0.1 at 2010-04-26 09:12:48) [GET]
+Rendering template within layouts/application
+Rendering replies/thanks
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/thanks]
+
+
+Processing RepliesController#new (for 127.0.0.1 at 2010-04-26 09:13:03) [GET]
+Rendering template within layouts/application
+Rendering replies/new
+Rendered replies/_form (146.1ms)
+Completed in 153ms (View: 148, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing RepliesController#create (for 127.0.0.1 at 2010-04-26 09:13:07) [POST]
+  Parameters: {"commit"=>"Send your reply", "reply"=>{"diet"=>"", "engagement_children"=>"", "name"=>"2rf2r34t", "wedding_children"=>"", "notes"=>"", "wedding_adults"=>"", "engagement_adults"=>""}, "authenticity_token"=>"vZrShgUG8e+YyiDiDDkvB6YfbyNjR+INlH14hzlEiKM="}
+  [4;35;1mReply Create (22.9ms)[0m   [0mINSERT INTO "replies" ("name", "engagement_children", "diet", "wedding_children", "created_at", "camping", "notes", "updated_at", "wedding_adults", "engagement_adults", "engagement", "wedding") VALUES('2rf2r34t', NULL, '', NULL, '2010-04-26 08:13:07', NULL, '', '2010-04-26 08:13:07', NULL, NULL, NULL, NULL)[0m
+Redirected to http://localhost:3000/thanks
+Completed in 52ms (DB: 23) | 302 Found [http://localhost/replies]
+
+
+Processing RepliesController#thanks (for 127.0.0.1 at 2010-04-26 09:13:07) [GET]
+Rendering template within layouts/application
+Rendering replies/thanks
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://localhost/thanks]
+
+
+Processing RepliesController#index (for 127.0.0.1 at 2010-04-26 09:13:13) [GET]
+Filter chain halted as [:check_logged_in] rendered_or_redirected.
+Completed in 1ms (View: 1, DB: 0) | 401 Unauthorized [http://localhost/replies]
+
+
+Processing RepliesController#edit (for 127.0.0.1 at 2010-04-26 09:13:20) [GET]
+  Parameters: {"id"=>"1"}
+Filter chain halted as [:check_logged_in] rendered_or_redirected.
+Completed in 1ms (View: 1, DB: 0) | 401 Unauthorized [http://localhost/replies/1/edit]
+
+
+Processing RepliesController#csv (for 127.0.0.1 at 2010-04-26 09:19:50) [GET]
+  [4;36;1mReply Load (27.2ms)[0m   [0;1mSELECT * FROM "replies" [0m
+Sending data rsvp_download260410-0919.csv
+Completed in 54ms (View: 20, DB: 27) | 200 OK [http://localhost/csv]
