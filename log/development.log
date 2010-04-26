@@ -6665,3 +6665,18 @@ Processing RepliesController#index (for 127.0.0.1 at 2010-04-26 09:28:52) [GET]
 Rendering template within layouts/application
 Rendering replies/index
 Completed in 47ms (View: 41, DB: 2) | 200 OK [http://localhost/replies]
+
+
+Processing RepliesController#show (for 127.0.0.1 at 2010-04-26 09:30:58) [GET]
+  Parameters: {"id"=>"8"}
+  [4;35;1mReply Load (0.4ms)[0m   [0mSELECT * FROM "replies" WHERE ("replies"."id" = 8) [0m
+Rendering template within layouts/application
+Rendering replies/show
+Completed in 86ms (View: 6, DB: 0) | 200 OK [http://localhost/replies/8]
+
+
+Processing RepliesController#index (for 127.0.0.1 at 2010-04-26 09:30:59) [GET]
+  [4;36;1mReply Load (1.7ms)[0m   [0;1mSELECT * FROM "replies" [0m
+Rendering template within layouts/application
+Rendering replies/index
+Completed in 53ms (View: 46, DB: 2) | 200 OK [http://localhost/replies]
