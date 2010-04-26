@@ -6650,3 +6650,18 @@ Processing RepliesController#csv (for 127.0.0.1 at 2010-04-26 09:19:50) [GET]
   [4;36;1mReply Load (27.2ms)[0m   [0;1mSELECT * FROM "replies" [0m
 Sending data rsvp_download260410-0919.csv
 Completed in 54ms (View: 20, DB: 27) | 200 OK [http://localhost/csv]
+
+
+Processing RepliesController#show (for 127.0.0.1 at 2010-04-26 09:28:50) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mReply Load (0.3ms)[0m   [0mSELECT * FROM "replies" WHERE ("replies"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering replies/show
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/replies/1]
+
+
+Processing RepliesController#index (for 127.0.0.1 at 2010-04-26 09:28:52) [GET]
+  [4;36;1mReply Load (2.1ms)[0m   [0;1mSELECT * FROM "replies" [0m
+Rendering template within layouts/application
+Rendering replies/index
+Completed in 47ms (View: 41, DB: 2) | 200 OK [http://localhost/replies]
