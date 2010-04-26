@@ -1,0 +1,28 @@
+<% columns = [{:type => 'html', :class => "first"}, {:type => 'html'}, {:type => 'html'}, {:type => nil, :class => "last"}] %>
+<%= datatable(columns, {:sort_by => "[0, 'desc']", :processing => image_tag("spinner.gif") }) %>
+
+<table id='replies' class='datatable'>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Engagement</th>
+      <th>Engagement_Adult</th>
+      <th>Engagement_Children</th>
+      <th>Wedding</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%- @replies.each do |reply| -%>
+      <tr id="<%= dom_id(reply) %>">
+        <td><%= reply.name %></td>
+        <td><%= reply.engagement %></td>
+        <td><%= reply.engagement_adults %></td>
+        <td><%= reply.engagement_children %></td>
+        <td><%= reply.wedding %></td>
+        <td><%= reply.notes %></td>
+        <td><%= link_to "Edit", edit_reply_path(reply) %></td>
+      </tr>
+    <%- end -%>
+  </tbody>
+</table>

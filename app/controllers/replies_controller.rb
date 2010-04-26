@@ -90,10 +90,17 @@ require "fastercsv"
     :type => 'text/csv; charset=utf-8; header=present',
     :filename => filename)
   end
+  
+  def datatable
+    @replies = Reply.all
+    # debugger
+  end
+  
 private  
   def check_logged_in
     authenticate_or_request_with_http_basic("Replies") do |username, password|
       username == "wedding" && password == "wedding"
     end    
   end
+
 end

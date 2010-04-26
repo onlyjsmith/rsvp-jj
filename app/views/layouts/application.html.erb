@@ -3,11 +3,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <title><%= h(yield(:title) || "Untitled") %></title>
-		<%= stylesheet_link_tag 'application', 'formtastic', 'formtastic_changes'%>
+		<%= stylesheet_link_tag 'application', 'demo_table', 'formtastic', 'formtastic_changes'%>
+		<%= javascript_include_tag :all %>
     <%= yield(:head) %>
   </head>
   <body>
-    <!-- <div id="container"> -->
+    <div id="container">
       <%- flash.each do |name, msg| -%>
         <%= content_tag :div, msg, :id => "flash_#{name}" %>
       <%- end -%>
@@ -17,6 +18,6 @@
       <%- end -%>
       
       <%= yield %>
-    <!-- </div> -->
+    </div>
   </body>
 </html>

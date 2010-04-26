@@ -18,8 +18,8 @@ form.formtastic em, form.formtastic strong { font-style:normal; font-weight:norm
 form.formtastic ol, form.formtastic ul { list-style:none; }
 form.formtastic abbr, form.formtastic acronym { border:0; font-variant:normal; }
 form.formtastic input, form.formtastic textarea, form.formtastic select { font-family:inherit; font-size:inherit; font-weight:inherit; }
-form.formtastic input, form.formtastic textarea, form.formtastic select { font-size:100%; }
-form.formtastic legend { white-space:normal; color:#000; }
+form.formtastic input, form.formtastic textarea, form.formtastic select { font-size:200%; }
+form.formtastic legend { white-space:normal; color:#000; font-weight: bold;}
 
 
 /* SEMANTIC ERRORS
@@ -31,9 +31,9 @@ form.formtastic ul.errors li { padding:0; border:none; display:list-item; }
 /* FIELDSETS & LISTS
 --------------------------------------------------------------------------------------------------*/
 form.formtastic fieldset { }
-form.formtastic fieldset.inputs { }
-form.formtastic fieldset.buttons { padding-left:25%; }
-form.formtastic fieldset ol { }
+form.formtastic fieldset.inputs { padding-top: 30px; padding-left: 20px; border-left: 4px solid #E388C5;}
+form.formtastic fieldset.buttons { padding-left:0%; }
+form.formtastic fieldset ol { margin-left: 30px;}
 form.formtastic fieldset.buttons li { float:left; padding-right:0.5em; }
 
 /* clearfixing the fieldsets */
@@ -68,9 +68,9 @@ form.formtastic fieldset > ol > li > li label input { line-height:100%; vertical
 /* NESTED FIELDSETS AND LEGENDS (radio, check boxes and date/time inputs use nested fieldsets)
 --------------------------------------------------------------------------------------------------*/
 form.formtastic fieldset > ol > li fieldset { position:relative; }
-form.formtastic fieldset > ol > li fieldset legend { position:absolute; width:95%; padding-top:0.1em; left: 0px; }
+form.formtastic fieldset > ol > li fieldset legend { position:absolute; width:95%; padding-top:0.1em; left: 0px;}
 form.formtastic fieldset > ol > li fieldset legend span { position:absolute; }
-form.formtastic fieldset > ol > li fieldset legend.label label { position:absolute; }
+form.formtastic fieldset > ol > li fieldset legend.label label { position:absolute; font-weight: normal;}
 form.formtastic fieldset > ol > li fieldset ol { float:left; width:74%; margin:0; padding:0 0 0 25%; }
 form.formtastic fieldset > ol > li fieldset ol li { padding:0; border:0; }
 
@@ -89,7 +89,7 @@ form.formtastic fieldset > ol > li ul.errors li { padding:0; border:none; displa
 
 /* STRING & NUMERIC OVERRIDES
 --------------------------------------------------------------------------------------------------*/
-form.formtastic fieldset > ol > li.string input { max-width:74%; }
+form.formtastic fieldset > ol > li.string input { max-width:44%; }
 form.formtastic fieldset > ol > li.password input { max-width: 13em; }
 form.formtastic fieldset > ol > li.numeric input { max-width:74%; }
 

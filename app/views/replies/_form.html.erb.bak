@@ -1,0 +1,33 @@
+	<% f.inputs do %>
+
+<div class="section">
+		<%= f.input :name, :label => 'Who are you?' %>
+</div>
+
+<div class="section">
+		<%= f.input :engagement, :label => 'Will you attend the engagement party, in Canada on 28 August?', :as => :radio, :collection => [["Yes please!", :true], ["Nope.", :false]] %>
+		<div class="subsection">
+				<%= f.input :engagement_adults, :label => 'How many adults?',:input_html => { :size => '6' } ,:required => false %>
+				<%= f.input :engagement_children, :label => 'How many children?',:input_html => { :size => '6' } ,:required => false %>
+		</div>
+</div>	
+
+<div class="section">
+		<%= f.input :wedding, :label => 'Will you attend the wedding and reception, in UK on 4 September?', :as => :radio, :collection => [["Yes please!", :true], ["Nope.", :false]], :html => {}%>
+		<div class="subsection">
+				<%= f.input :wedding_adults, :label => 'How many adults?',:input_html => { :size => '6' }, :required => false %>
+				<%= f.input :wedding_children, :label => 'How many children?',:input_html => { :size => '6' }, :required => false %>	
+		</div>	
+</div>
+
+<div class="section">
+		<%= f.input :diet, :label => 'Any special dietary requirements?', :required => false %>
+		<%= f.input :notes, :label => 'Anything else to add?', :input_html => { :class => 'autogrow' }, :required => false%>
+</div>
+
+	<% end %>
+<div class="section" style="padding-bottom:0;">
+	<% f.buttons do %>
+		<%= f.commit_button 'Send your reply', :button_html => {} %>
+	<% end %>
+</div>

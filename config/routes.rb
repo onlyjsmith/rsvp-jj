@@ -1,9 +1,10 @@
 ActionController::Routing::Routes.draw do |map|
   
   map.resources :replies
-  map.root :controller => :replies, :action => :new
+  map.root :controller => :replies, :action => :index
   map.csv '/csv', :controller => :replies, :action => :csv
   map.thanks '/thanks', :controller => :replies, :action => :thanks
+  map.datatable '/datatable', :controller => :replies, :action => :datatable
 
 
   # The priority is based upon order of creation: first created -> highest priority.

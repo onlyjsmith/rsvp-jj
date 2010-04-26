@@ -1,33 +1,26 @@
 <% semantic_form_for @reply do |f| %>
-	<% f.inputs do %>
 
-<div class="section">
-		<%= f.input :name, :label => 'Who are you?' %>
-</div>
-
-<div class="section">
-		<%= f.input :engagement, :label => 'Will you attend the engagement party, in Canada on 28 August?', :as => :radio, :collection => [["Yes please!", :true], ["Nope.", :false]] %>
-		<div class="subsection">
-				<%= f.input :engagement_adults, :label => 'How many adults?',:input_html => { :size => '6' } %>
-				<%= f.input :engagement_children, :label => 'How many children?',:input_html => { :size => '6' } %>
-		</div>
-</div>	
-
-<div class="section">
-		<%= f.input :wedding, :label => 'Will you attend the wedding and reception, in UK on 4 September?', :as => :radio, :collection => [["Yes please!", :true], ["Nope.", :false]] %>
-		<div class="subsection">
-				<%= f.input :wedding_adults, :label => 'How many adults?',:input_html => { :size => '6' } %>
-				<%= f.input :wedding_children, :label => 'How many children?',:input_html => { :size => '6' } %>	
-		</div>	
-</div>
-
-<div class="section">
-		<%= f.input :diet, :label => 'Any special dietary requirements?' %>
-		<%= f.input :notes, :label => 'Anything else to add?', :input_html => { :class => 'autogrow' } %>
-</div>
-
+	
+	<% f.inputs "Engagement party" do %>
+		<%= f.input :engagement, :label => 'Will you be attending the engagement party?', :as => :radio %>
+		<%= f.input :engagement_adults, :label => 'Adults', :input_html => { :size => 7 } %>
+		<%= f.input :engagement_children, :label => 'Children', :input_html => { :size => 7 } %>
 	<% end %>
-<div class="section">
-	<%= f.commit_button 'Send your reply' %>
-</div>
+	
+	<% f.inputs "Wedding" do %>
+		<%= f.input :wedding, :label => 'Will you be attending the wedding?', :as => :radio %>
+		<%= f.input :wedding_adults, :label => 'Adults', :input_html => { :size => 7 } %>
+		<%= f.input :wedding_children, :label => 'Children', :input_html => { :size => 7 } %>
+		<%= f.input :camping, :label => 'Do you fancy some comfortable/rustic camping?', :as => :radio %>
+	<% end %>
+	
+	<% f.inputs "Who's replying?" do %>
+		<%= f.input :name %>
+		<%= f.input :diet, :label => 'Are there any dietary requirements?' %>
+	<% end %>
+		
+	<% f.buttons do %>
+		<%= f.commit_button 'Send reply' %>
+	<% end %>	
+	
 <% end %>

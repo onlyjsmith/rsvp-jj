@@ -1,5 +1,8 @@
 <% title "Replies" %>
 
+<p><%= link_to "New Reply", new_reply_path %> | <%= link_to "Download CSV", csv_path %> |
+<%= link_to "View sortable datatable", datatable_path %></p>
+
 <table>
   <tr>
     <th>Name</th>
@@ -32,5 +35,4 @@
   <% end %>
 </table>
 
-<p><%= link_to "New Reply", new_reply_path %></p>
-<p><%= link_to "Download CSV", csv_path %></p>
+
