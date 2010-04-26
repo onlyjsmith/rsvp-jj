@@ -6,7 +6,7 @@
 </div>
 
 <div class="section">
-		<%= f.input :engagement, :label => 'Will you attend the engagement party, in Canada on 28 August?', :as => :radio, :collection => [["Yes please!", true], ["Nope.", false]] %>
+		<%= f.input :engagement, :label => 'Will you attend the engagement party, in Canada on 28 August?', :as => :radio, :collection => [["Yes please!", :true], ["Nope.", :false]] %>
 		<div class="subsection">
 				<%= f.input :engagement_adults, :label => 'How many adults?',:input_html => { :size => '6' } %>
 				<%= f.input :engagement_children, :label => 'How many children?',:input_html => { :size => '6' } %>
@@ -14,7 +14,7 @@
 </div>	
 
 <div class="section">
-		<%= f.input :wedding, :label => 'Will you attend the wedding and reception, in UK on 4 September?', :as => :radio, :collection => [["Yes please!", true], ["Nope.", false]] %>
+		<%= f.input :wedding, :label => 'Will you attend the wedding and reception, in UK on 4 September?', :as => :radio, :collection => [["Yes please!", :true], ["Nope.", :false]] %>
 		<div class="subsection">
 				<%= f.input :wedding_adults, :label => 'How many adults?',:input_html => { :size => '6' } %>
 				<%= f.input :wedding_children, :label => 'How many children?',:input_html => { :size => '6' } %>	
