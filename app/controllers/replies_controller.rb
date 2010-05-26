@@ -18,7 +18,8 @@ require "fastercsv"
   
   def create
     @reply = Reply.new(params[:reply])
-    puts params[:code]
+    UserMailer.deliver_submission_confirmation(@reply)
+    puts 'EMAIL tried to send - no idea if it worked'
     if @reply.save
       # flash[:notice] = "Successfully created reply."
       puts 'REPLY CREATED'
