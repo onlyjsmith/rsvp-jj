@@ -11,7 +11,7 @@ class CreateReplies < ActiveRecord::Migration
       t.integer :wedding_children
       t.boolean :camping
       t.string :diet
-      t.string :notes
+      t.text :notes
       t.timestamps
     end
   end
