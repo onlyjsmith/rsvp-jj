@@ -69,9 +69,10 @@ require "fastercsv"
   def csv
      @records = Reply.all
      csv_string = FasterCSV.generate do |csv|
-       csv << %w{Name Engagement Engagement_Adults Engagement_Children Wedding Wedding_Adults Wedding_Children Camping Diet Notes Updated}
+       csv << %w{Code Name Engagement Engagement_Adults Engagement_Children Wedding Wedding_Adults Wedding_Children Camping Diet Notes Updated}
        @records.each do |line|
          csv << [
+           line['code'],
            line['name'], 
            line['engagement'],
            line['engagement_adults'],
