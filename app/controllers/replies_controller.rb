@@ -19,13 +19,13 @@ require "fastercsv"
   def create
     @reply = Reply.new(params[:reply])
     puts params[:code]
-    # if @reply.save
-    #   # flash[:notice] = "Successfully created reply."
-    #   puts 'REPLY CREATED'
-    #   render :action => 'thanks'
-    # else
-    #   render :action => 'new'
-    # end
+    if @reply.save
+      # flash[:notice] = "Successfully created reply."
+      puts 'REPLY CREATED'
+      render :action => 'thanks'
+    else
+      render :action => 'new'
+    end
   end
   
   def edit

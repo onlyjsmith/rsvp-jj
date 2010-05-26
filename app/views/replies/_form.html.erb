@@ -19,6 +19,10 @@
 		<%= f.input :diet, :label => 'Are there any dietary requirements?' %>
 		<%= f.input :code, :label => 'Please can you type in the number from the back of the invitation?' %>
 	<% end %>
+	
+	<% f.inputs "Add a note?" do %>
+		<%= f.input :note, :label => "What are you thinking?" %>
+	<% end %>
 		
 	<% f.buttons do %>
 		<%= f.commit_button 'Send reply' %>
