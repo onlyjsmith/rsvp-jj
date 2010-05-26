@@ -1,7 +1,7 @@
 /* @override http://localhost:3000/stylesheets/application.css?1272283840 */
 
 body {
-  background-color: #4B7399;
+  background-color: #ffffff;
   font-family: Arial;
   font-size: 14px;
   padding-left: 10px;
@@ -21,7 +21,7 @@ a {
   overflow: hidden;
 }
 
-#container {
+/*#container {
   width: 75%;
   margin: 0 auto;
   background-color: #FFF;
@@ -29,7 +29,7 @@ a {
   border: solid 1px black;
   margin-top: 20px;
   font-size: 16px;
-}
+}*/
 
 #flash_notice, #flash_error {
   padding: 5px 8px;
