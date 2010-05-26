@@ -31,7 +31,7 @@ form.formtastic ul.errors li { padding:0; border:none; display:list-item; }
 /* FIELDSETS & LISTS
 --------------------------------------------------------------------------------------------------*/
 form.formtastic fieldset { }
-form.formtastic fieldset.inputs { padding-top: 20px; padding-left: 20px; border-left: 4px solid #E388C5;}
+form.formtastic fieldset.inputs { padding-top: 20px; padding-left: 20px; margin-top: 20px; border-left: 6px solid #868686;}
 form.formtastic fieldset.buttons { padding-left:0%; }
 form.formtastic fieldset ol { margin-left: 30px;}
 form.formtastic fieldset.buttons li { float:left; padding-right:0.5em; }

@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(:version => 20100425212129) do
     t.integer  "wedding_children"
     t.boolean  "camping"
     t.string   "diet"
-    t.text     "notes"
+    t.string   "notes"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
