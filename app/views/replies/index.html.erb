@@ -5,6 +5,7 @@
 
 <table>
   <tr>
+    <th>Code</th>
     <th>Name</th>
     <th>Engagement</th>
     <th>Engagement Adults</th>
@@ -18,6 +19,7 @@
   </tr>
   <% for reply in @replies %>
     <tr>
+      <td><%=h reply.code %></td>
       <td><%=h reply.name %></td>
       <td><%=h reply.engagement %></td>
       <td><%=h reply.engagement_adults %></td>

@@ -1,9 +1,10 @@
 class CreateReplies < ActiveRecord::Migration
   def self.up
     create_table :replies do |t|
+      t.string :code
       t.string :name
       t.boolean :engagement
-      t.integer :engagment_adults
+      t.integer :engagement_adults
       t.integer :engagement_children
       t.boolean :wedding
       t.integer :wedding_adults

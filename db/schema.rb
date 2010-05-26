@@ -9,9 +9,10 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100425214242) do
+ActiveRecord::Schema.define(:version => 20100425212129) do
 
   create_table "replies", :force => true do |t|
+    t.string   "code"
     t.string   "name"
     t.boolean  "engagement"
     t.integer  "engagement_adults"
