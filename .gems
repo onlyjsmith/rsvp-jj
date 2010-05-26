@@ -1,3 +1,2 @@
-rails --version >= 2.3.5'
-formtastic -v 0.9.8
-fastercsv -v 1.5.3
+formtastic
+fastercsv
