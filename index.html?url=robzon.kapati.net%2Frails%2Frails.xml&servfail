@@ -1,0 +1,75 @@
+<html>
+	<head>
+		<title>OpenDNS</title>
+	</head>
+
+	<body id="mainbody" onLoad="testforbanner();" style="margin: 0px;">
+		<script language="JavaScript">
+			function testforbanner() {
+				var width;
+				var height;
+				var isbanner = false;
+				var banispop = false;
+				// width x height, is pop
+				var bannersizes = [
+					[300,	250,	false],
+					[250,	250,	false],
+					[240,	400,	false],
+					[336,	280,	false],
+					[180,	150,	false],
+					[468,	60,		false],
+					[234,	60, 	false],
+					[88,	31, 	false],
+					[120,	90, 	false],
+					[120,	60, 	false],
+					[120,	240, 	false],
+					[125,	125, 	false],
+					[728,	90, 	false],
+					[160,	600, 	false],
+					[120,	600, 	false],
+					[300,	600, 	false],
+					[300,	125, 	false],
+					[530,	300, 	false],
+					[190,	200, 	false],
+					[470,	250, 	false],
+					[720,	300, 	true],
+					[500, 	350, 	true],
+					[550, 	480, 	true]
+				];
+
+				if(typeof(window.innerHeight) == 'number') {
+					height = window.innerHeight;
+					width = window.innerWidth;
+				} else if(typeof(document.body.offsetHeight) == 'number') {
+					height = document.body.offsetHeight;
+					width = document.body.offsetWidth;
+				}
+				
+				var arrSize = bannersizes.length;
+				
+				for (var i = 0; i < arrSize; i++) {
+					var b = bannersizes[i];
+					widthdiff = Math.abs(width - b[0]);
+					heightdiff = Math.abs(height - b[1]);
+					if(widthdiff <= 2 && heightdiff <= 2) {
+						isbanner = true;
+						banispop = b[2];
+					}
+				}
+				
+				if(isbanner || (width < 100 && width != 0) || (height < 100 && height != 0)) {
+					if(banispop && self == parent) {
+						self.close();
+						return;
+					}
+					window.location = '/b' + 'anner.php?w=' + width + '&h=' + height + '&d=robzon.kapati.net&u=robzon.kapati.net%2Frails%2Frails.xml&r=&view=';
+				} else {
+					window.location = '/main?url=robzon.kapati.net%2Frails%2Frails.xml&servfail=';
+				}
+			}
+		</script>
+		<noscript>
+			<iframe frameborder="0" src="/main?url=robzon.kapati.net%2Frails%2Frails.xml&servfail=" width="100%" height="100%"></iframe>
+		</noscript>
+	</body>
+</html>

@@ -19,6 +19,7 @@ require "fastercsv"
   def create
     @reply = Reply.new(params[:reply])
     UserMailer.deliver_submission_confirmation(@reply)
+    UserMailer.deliver_respondent_confirmation(@reply)
     puts 'EMAIL tried to send - no idea if it worked'
     if @reply.save
       # flash[:notice] = "Successfully created reply."
@@ -70,11 +71,12 @@ require "fastercsv"
   def csv
      @records = Reply.all
      csv_string = FasterCSV.generate do |csv|
-       csv << %w{Code Name Engagement Engagement_Adults Engagement_Children Wedding Wedding_Adults Wedding_Children Camping Diet Notes Updated}
+       csv << %w{Code Name Email Engagement Engagement_Adults Engagement_Children Wedding Wedding_Adults Wedding_Children Camping Diet Notes Updated}
        @records.each do |line|
          csv << [
            line['code'],
            line['name'], 
+           line['email'],
            line['engagement'],
            line['engagement_adults'],
            line['engagement_children'],
