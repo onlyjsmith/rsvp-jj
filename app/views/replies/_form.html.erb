@@ -1,13 +1,13 @@
 <% semantic_form_for @reply do |f| %>
 
 	
-	<% f.inputs "Engagement party" do %>
+	<% f.inputs "Engagement party (28 August 2010, Canada)" do %>
 		<%= f.input :engagement, :label => 'Will you be attending the engagement party?', :as => :radio %>
 		<%= f.input :engagement_adults, :label => 'Adults', :input_html => { :size => 7 } %>
 		<%= f.input :engagement_children, :label => 'Children', :input_html => { :size => 7 } %>
 	<% end %>
 	
-	<% f.inputs "Wedding" do %>
+	<% f.inputs "Wedding (4 September 2010, England)" do %>
 		<%= f.input :wedding, :label => 'Will you be attending the wedding?', :as => :radio %>
 		<%= f.input :wedding_adults, :label => 'Adults', :input_html => { :size => 7 } %>
 		<%= f.input :wedding_children, :label => 'Children', :input_html => { :size => 7 } %>
@@ -15,7 +15,7 @@
 	<% end %>
 	
 	<% f.inputs "Who's replying?" do %>
-		<%= f.input :name, :label => "What's your name?" %>
+		<%= f.input :name, :as => :string, :label => "Please add the names of everyone coming, one per line" %> #, :input_html => { :class => 'autogrow', :size => 10} %>
 		<%= f.input :email, :label => "If you add your email, we can send a confirmation of your RSVP" %>  
 		<%= f.input :diet, :label => 'Are there any dietary requirements?' %>
 		<%= f.input :code, :label => 'Please can you type in the number from the back of the invitation?' %>

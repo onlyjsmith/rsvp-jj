@@ -9,11 +9,11 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100612124856) do
+ActiveRecord::Schema.define(:version => 20100617073101) do
 
   create_table "replies", :force => true do |t|
     t.string   "code"
-    t.string   "name"
+    t.text     "name",                :limit => 255
     t.boolean  "engagement"
     t.integer  "engagement_adults"
     t.integer  "engagement_children"

@@ -10,7 +10,6 @@ class UserMailer < ActionMailer::Base
 
   def respondent_confirmation(reply)
     recipients  reply.email
-#TODO Add multiple BCCs here, and TIDY UP THE EMAIL!
     cc         ["jonathan@impacti.org","jessica@impacti.org"]
     from        "wedding@impacti.org"
     subject     "Confirmation for Jonathan & Jessica"
