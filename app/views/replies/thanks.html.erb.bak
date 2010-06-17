@@ -1,0 +1,7 @@
+<h2>
+	<% if params[:reply][:engagement] == "true" or params[:reply][:wedding] == "true" %>
+	  <%= "Thanks for replying, looking forward to seeing you!" %>
+	<% else %>
+	  <%= "Thanks for your reply, sorry you're not coming!" %>
+	<% end %>
+</h2>
