@@ -15,7 +15,7 @@
 	<% end %>
 	
 	<% f.inputs "Who's replying?" do %>
-		<%= f.input :name, :as => :string, :label => "Please add the names of everyone coming, one per line" %> #, :input_html => { :class => 'autogrow', :size => 10} %>
+		<%= f.input :name, :as => :string, :label => "Please add the names of everyone coming" %>
 		<%= f.input :diet, :label => 'Are there any dietary requirements?' %>
 		<%= f.input :code, :label => 'Please can you type in the number from the back of the invitation?' %>
 	<% end %>
